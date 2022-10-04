@@ -1,5 +1,4 @@
 let y;
-let justHitRightWall;
 let yspeed = 4;
 
 function setup() {
@@ -9,11 +8,11 @@ function setup() {
 
 function draw() {
   background(220);
-  if (y > height - 25 || y <0 + 25) {
-    yspeed *= -1.005
+  if (y > height - 25 || y < 0 + 25) {
+    yspeed *= -1.005;
   }
 
   //Move
   y += yspeed;
-  ellipse(width/2, y, 50, 50);
+  ellipse(width / 2, y, 50, 50);
 }

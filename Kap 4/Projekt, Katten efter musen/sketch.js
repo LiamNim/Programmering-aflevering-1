@@ -1,6 +1,5 @@
 //Jeg starter med at definere hastigheder og give bogstaver tekst stykker
 //eller værdier så jeg senere hen nemmere kan få tal og tekst op på skærmen
-let justHitRightWall;
 let yspeed = 0;
 let xspeed = 0;
 let xspeed1 = 3;
@@ -59,8 +58,6 @@ function draw() {
   fill(150); //Jeg laver mine rektangler grå og gør så de ikke har nogen kant
   noStroke();
   image(img, x - 20, y - 20, 70, 70); //Jeg sætter billedet af min mus ind og tildeler den værdierne x og y, og giver den en hastighed
-  y += yspeed;
-  x += xspeed;
   if (y > height - 28 || y < 0 + 30) {
     //Den sættes til at registrere hvis musen rammer toppen eller bunden og får den til at gå den anden vej
     yspeed *= -1;
@@ -69,6 +66,8 @@ function draw() {
     //Det samme sker her undtagen at det er til siderne
     xspeed *= -1;
   }
+  y += yspeed;
+  x += xspeed;
 
   image(img1, x1 - 40, y1 - 40, 100, 100); //Jeg sætter min første kat ind og tildeler den værdierne x1 og y1
   y1 += yspeed1;
